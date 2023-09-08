@@ -49,9 +49,18 @@ height: Hug (336px); */
   z-index: 99999;
 }
 .close-btn{
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  /* border-radius: 50%;
+box-sizing: border-box; */
   width: 24px;
 height: 24px;
 flex-shrink: 0;
+line-height: 0;
+}
+.close-btn-icons{
+  align-items: center;
 }
 
 
