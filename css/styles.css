@@ -2,12 +2,11 @@
 
 .modal {
   width: 408px;
-height: 584px;
-flex-shrink: 0;
-/* what is it? */
-border-radius: 4px;
-background: #FCFCFC;
-
+  height: 584px;
+  flex-shrink: 0;
+  /* what is it? */
+  border-radius: 4px;
+  background: #fcfcfc;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -18,9 +17,17 @@ height: Hug (336px); */
   /* top: 82px;
   left: 400px; */
 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50% -50%);
+  /* top: 50%;
+  transform: translate(-50% -50%); */
+  gap: 8px;
+  left: 35%;
+}
+
+.sub-form {
+  display: flex;
+  width: 360px;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 8px;
 }
 
@@ -31,14 +38,10 @@ height: Hug (336px); */
 }
 
 .placeholder {
-  width: 18px;
+  /* width: 18px; */
   border: 1.25px;
-  rotate: -90 deg;
+  /* rotate: -90 deg; */
 }
- 
-
-
-
 
 .backdrop {
   position: fixed;
@@ -56,23 +59,22 @@ height: Hug (336px); */
 .backdrop .is-open {
   opacity: 1;
   visibility: hidden;
-  pointer-events: none; 
+  pointer-events: none;
 }
-.close-btn{
+.close-btn {
   position: absolute;
   top: 24px;
   right: 24px;
   /* border-radius: 50%;
 box-sizing: border-box; */
   width: 24px;
-height: 24px;
-flex-shrink: 0;
-line-height: 0;
+  height: 24px;
+  flex-shrink: 0;
+  line-height: 0;
 }
-.close-btn-icons{
+.close-btn-icons {
   align-items: center;
 }
-
 
 /******  COMMON STYLES  ******/
 .list {

@@ -593,7 +593,7 @@
 
     <div class="backdrop is-open">
 
-    <div class="modal" name="send_form" autocomplete="off">
+    <div class="modal" >
       <button class="close-btn">
         <svg class="close-btn-icons" width="8" height="8" aria-label="form-close-icon">
           <use href="./images/icons.svg#icon-close">
@@ -604,7 +604,7 @@
       
           <!-- FORM -->
 
-      <form class="sub-form">
+      <form class="sub-form name="send_form" autocomplete="off"">
         <div class="wrapper-fields">
 <label class="form-label">
         Name
@@ -628,9 +628,13 @@
           class="form-input"
           type="text"
           name="phone"
-          placeholder="Andrew Berger"
+          placeholder="....."
           autofocus
         />
+        <svg >
+          <use href="./images/icons.svg#icon-phone" width="18" hieght="18">
+          </use>
+        </svg>
       </label>
     </div>
     <div class="wrapper-fields">
@@ -640,9 +644,13 @@
           class="form-input"
           type="text"
           name="username"
-          placeholder="Andrew Berger"
+          placeholder="...."
           autofocus
         />
+        <svg >
+          <use href="./images/icons.svg#icon-email" width="18" hieght="18">
+          </use>
+        </svg>
       </label>
 
     </div>
