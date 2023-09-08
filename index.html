@@ -589,20 +589,24 @@
       </div>
     </footer>
 
-    <!-- FORM -->
     <!-- BACKDROP -->
 
-    <div class="backdrop">
+    <div class="backdrop is-open">
 
-    <div class="form" name="send_form" autocomplete="off">
+    <div class="modal" name="send_form" autocomplete="off">
       <button class="close-btn">
         <svg class="close-btn-icons" width="8" height="8" aria-label="form-close-icon">
           <use href="./images/icons.svg#icon-close">
-
           </use>
         </svg>
-      <title>Leave your contacts and we will call you back</title>
-      <label class="form-label">
+        </button>
+      <p class="tittle-form">Leave your contacts and we will call you back</p>
+      
+          <!-- FORM -->
+
+      <form class="sub-form">
+        <div class="wrapper-fields">
+<label class="form-label">
         Name
         <input
           class="form-input"
@@ -611,8 +615,14 @@
           placeholder="    |"
           autofocus
         />
+        <svg >
+          <use href="./images/icons.svg#icon-person" width="18" hieght="24">
+          </use>
+        </svg>
       </label>
-      <label class="form-label">
+        </div>
+        <div class="wrapper-fields">
+<label class="form-label">
         Phone
         <input
           class="form-input"
@@ -622,7 +632,9 @@
           autofocus
         />
       </label>
-      <label class="form-label">
+    </div>
+    <div class="wrapper-fields">
+<label class="form-label">
         Email
         <input
           class="form-input"
@@ -633,6 +645,8 @@
         />
       </label>
 
+    </div>
+    <div class="wrapper-fields">
       <label class="form-label">
         Comment
         <textarea
@@ -649,7 +663,9 @@
           placeholder="Text input"
         />
       </label> -->
-
+    </div>
+      </form>
+    
       <button class="form-button" type="submit">Send</button>
     </div>
   </div>

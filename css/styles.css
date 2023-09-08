@@ -1,9 +1,10 @@
 /****** FORM ******/
 
-.form {
-  width: 517px;
-max-height: 794spx;
+.modal {
+  width: 408px;
+height: 584px;
 flex-shrink: 0;
+/* what is it? */
 border-radius: 4px;
 background: #FCFCFC;
 
@@ -23,7 +24,7 @@ height: Hug (336px); */
   gap: 8px;
 }
 
-.form-labe {
+.form-label {
   display: flex;
   flex-direction: column;
   transition: color 150ms ease-in-out;
@@ -47,11 +48,20 @@ height: Hug (336px); */
   height: 100%;
   background-color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.4));
   z-index: 99999;
+  transition: opasity 500ms linear, visibility 500ms;
+  /* opacity: 0.4;
+  visibility: hidden;pointer:pointer-events: none; */
+}
+
+.backdrop .is-open {
+  opacity: 1;
+  visibility: hidden;
+  pointer-events: none; 
 }
 .close-btn{
   position: absolute;
   top: 24px;
-  left: 24px;
+  right: 24px;
   /* border-radius: 50%;
 box-sizing: border-box; */
   width: 24px;
