@@ -4,23 +4,17 @@
   width: 408px;
   height: 584px;
   flex-shrink: 0;
+  padding: 24px;
   /* what is it? */
   border-radius: 4px;
   background: #fcfcfc;
   position: absolute;
   display: flex;
   flex-direction: column;
-  padding: 8px;
   border: 1px solid #212121;
-  /* width: Fixed (360px);
-height: Hug (336px); */
-  /* top: 82px;
-  left: 400px; */
-
-  /* top: 50%;
-  transform: translate(-50% -50%); */
-  gap: 8px;
-  left: 35%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
 }
 
 .sub-form {
@@ -74,6 +68,16 @@ box-sizing: border-box; */
 }
 .close-btn-icons {
   align-items: center;
+}
+
+.tittle-form {
+  color: var(--NAVY-BLUE, #2e2f42);
+  text-align: center;
+  /* Body Medium */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.02em;
 }
 
 /******  COMMON STYLES  ******/
