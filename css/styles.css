@@ -14,7 +14,11 @@
   border: 1px solid #212121;
   top: 50%;
   left: 50%;
-  transform: translate(-50% -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* дозволяє задавати анімаційний ефект для зміни значень властивостей стилю */
 }
 
 .sub-form {
@@ -68,6 +72,7 @@
   height: 58px;
   border-radius: 4px;
   padding-left: 38px;
+  border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.4));
 }
 .input-icon-wrapper {
   position: relative;
@@ -95,10 +100,26 @@
   margin-bottom: 8px;
 }
 
-.placeholder {
-  /* width: 18px; */
-  border: 1.25px;
-  /* rotate: -90 deg; */
+.form-button {
+  display: inline-block;
+  min-width: 169px;
+  height: 56px;
+  color: var(--WHITE, #fff);
+  text-align: center;
+  /* Button Text */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.04em;
+  border: none;
+  border-radius: 4px;
+  background: var(--IRIS, #4d5ae5);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* дозволяє задавати анімаційний ефект для зміни значень властивостей стилю */
 }
 
 /* BACKDROP */
@@ -123,20 +144,31 @@
 }
 .close-btn {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  /* обнулення дефолтних відступів, які елемент має від браузера */
   top: 24px;
   right: 24px;
   border-radius: 50%;
-  border-color: #e7e9fc;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* дозволяє задати стиль, ширину та колір межі навколо елемента */
   width: 24px;
   height: 24px;
   flex-shrink: 0;
   line-height: 0;
-  stroke: #e7e9fc;
-  stroke-width: 1px;
+  /* stroke: #e7e9fc;
+  stroke-width: 1px; */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* дозволяє задавати анімаційний ефект для зміни значень властивостей стилю */
 }
 
 .close-btn:hover .close-btn:focus {
-  fill: #404bbf;
+  background-color: #404bbf;
+  border: none;
 }
 .close-btn-icons {
   align-items: center;
@@ -697,17 +729,16 @@ img {
   /* відступ між елементами */
 }
 .soc-seti-p {
-  text-align: center;
+  text-align: left;
   color: #fff;
   /* Body Medium */
-  font-family: Roboto;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
   margin-bottom: 16px; /* відступ між елементами списку */
 }
+
 .soc-list-style {
   display: flex;
   gap: 16px;
@@ -759,4 +790,72 @@ img {
 
 .footer-list {
   text-decoration: none;
+}
+/* FORMA-SUBSCRIBE */
+
+.forma-subscribe {
+  display: inline;
+}
+.sub-tittle {
+  text-align: left;
+  color: #fff;
+  /* Body Medium */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+.form-footer {
+  display: flex;
+  gap: 24px;
+}
+.input-sub-footer {
+  width: 264px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid var(--WHITE, #fff);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  color: var(--WHITE, #fff);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5; /* 200% */
+  letter-spacing: 0.04em;
+  background-color: transparent;
+  /* визначення кольору фону */
+  padding-left: 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  /* встановлює тінь на елемент */
+}
+
+.placeholder {
+  /* width: 18px; */
+  /* border: 1.25px; */
+  color: var(--WHITE, #fff);
+  /* rotate: -90 deg; */
+}
+
+.sub-btn {
+  display: inline-flex;
+  padding: 8px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border: none;
+  border-radius: 4px;
+  background: var(--IRIS, #4d5ae5);
+  color: var(--WHITE, #fff);
+  text-align: center;
+  /* Button Text */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+.icon-btn-sub {
+  margin-left: 16px;
 }
