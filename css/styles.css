@@ -1,8 +1,8 @@
-/****** FORM ******/
+/****** MODAL FORM ******/
 
 .modal {
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   flex-shrink: 0;
   padding: 24px;
   /* what is it? */
@@ -18,7 +18,6 @@
 }
 
 .sub-form {
-  display: flex;
   width: 360px;
   flex-direction: column;
   align-items: flex-start;
@@ -26,9 +25,74 @@
 }
 
 .form-label {
-  display: flex;
+  display: block;
   flex-direction: column;
   transition: color 150ms ease-in-out;
+  color: var(--LIGHT-SLATE, #8e8f99);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16; /* 116.667% */
+  letter-spacing: 0.04em;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.form-comment {
+  width: 100%;
+  height: 120px;
+  border-radius: 4px;
+  border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.4));
+  padding-top: 8px;
+  padding-left: 16px;
+  resize: none;
+  transition: border-color 250ms ease-out;
+
+  color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.4));
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16; /* 116.667% */
+  letter-spacing: 0.04em;
+}
+
+.form-comment::placeholder {
+  color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.4));
+}
+
+.form-comment:focus {
+  border-color: #4d5ae5;
+  outline: transparent;
+}
+
+.form-input {
+  width: 100%;
+  height: 58px;
+  border-radius: 4px;
+  padding-left: 38px;
+}
+.input-icon-wrapper {
+  position: relative;
+}
+
+.form-input:focus {
+  border-color: #4d5ae5;
+  outline: transparent;
+}
+
+.form-input:focus + .icons-form {
+  stroke: #4d5ae5;
+}
+
+.icons-form {
+  stroke: #2e2f42;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  transition: stroke 150ms ease-out;
+}
+
+.wrapper-fields {
+  margin-bottom: 8px;
 }
 
 .placeholder {
@@ -36,6 +100,8 @@
   border: 1.25px;
   /* rotate: -90 deg; */
 }
+
+/* BACKDROP */
 
 .backdrop {
   position: fixed;
@@ -59,15 +125,25 @@
   position: absolute;
   top: 24px;
   right: 24px;
-  /* border-radius: 50%;
-box-sizing: border-box; */
+  border-radius: 50%;
+  border-color: #e7e9fc;
   width: 24px;
   height: 24px;
   flex-shrink: 0;
   line-height: 0;
+  stroke: #e7e9fc;
+  stroke-width: 1px;
+}
+
+.close-btn:hover .close-btn:focus {
+  fill: #404bbf;
 }
 .close-btn-icons {
   align-items: center;
+  stroke: #212121;
+}
+.close-btn-icons {
+  transition: #ffffff stroke 250ms ease-out;
 }
 
 .tittle-form {
@@ -78,9 +154,13 @@ box-sizing: border-box; */
   font-weight: 500;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
+  width: 360px;
+  margin-bottom: 16px;
+  margin-top: 32px;
 }
 
 /******  COMMON STYLES  ******/
+
 .list {
   list-style-type: none;
 }
