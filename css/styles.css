@@ -54,6 +54,7 @@
   /* font-weight: 400; */
   letter-spacing: 0.04em;
   line-height: 1.17;
+  color: #8e8f99;
 }
 
 .form-comment {
@@ -70,13 +71,13 @@
   font-weight: 400;
   line-height: 1.17; /* 116.667% */
   letter-spacing: 0.04em;
-
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  outline: transparent;
   background-color: transparent;
   padding: 8px 16px;
   /* для встановлення стилю контуру для елемента */
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  border-color: #4d5ae5;
 }
 
 .form-comment::placeholder {
@@ -125,6 +126,7 @@
   border: none;
   fill: #f4f4fd;
 }
+
 .link-privacy {
   color: #4d5ae5;
 }
@@ -153,11 +155,10 @@
 }
 
 .form-input:focus + .icons-form {
-  stroke: #4d5ae5;
+  fill: #4d5ae5;
 }
 
 .icons-form {
-  stroke: #2e2f42;
   position: absolute;
   top: 50%;
   left: 16px;
@@ -165,13 +166,10 @@
   transition: stroke 150ms ease-out;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* що дозволяє задавати анімаційний ефект для зміни значень властивостей стилю */
-  fill: #4d5ae5;
+  fill: none;
+  fill: #2e2f42;
   /* для зміни кольору іконки при кліку на input 
   (для цього потрібно прибрати властивість fill у спрайті для іконки) */
-}
-
-.wrapper-fields {
-  margin-bottom: 16px;
 }
 
 .form-button {
@@ -251,24 +249,18 @@
   background-color: #404bbf;
   border: none;
 }
-
-.close-btn:focus + .close-btn-icons {
+.close-btn:hover .close-btn-icons,
+.close-btn:focus .close-btn-icons {
   fill: #ffffff;
 }
+
+/* ??? .close-btn:hover + .close-btn-icons {
+  fill: #ffffff;
+} */
 
 .close-btn-icons {
   align-items: center;
   stroke: #212121;
-}
-.close-btn-icons {
-  /* transition: #ffffff stroke 250ms ease-out; ? */
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* для плавної зміни кольору */
-}
-
-.close-btn-icons:hover,
-.close-btn-icons:focus {
-  fill: #ffffff stroke 250ms ease-out;
 }
 
 .form-comment:focus {
